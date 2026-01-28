@@ -58,6 +58,8 @@ function EOG:UpdateGroupParity()
         end
     else
         -- In party, Don't show
+        EOG.frame:Hide()
+        EOG.frame.text:SetText("Party")
     end
 
     if myGroup then

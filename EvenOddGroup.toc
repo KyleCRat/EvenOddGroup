@@ -1,0 +1,8 @@
+## Interface: 120000
+## Title: Even Odd Group
+## Notes: Displays whether you're in an even or odd group
+## Author: Yvairel
+## Version: 12.0.0-1
+## SavedVariablesPerCharacter: EvenOddGroupDB
+
+EvenOddGroup.lua

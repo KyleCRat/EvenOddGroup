@@ -109,13 +109,18 @@ EOG.frame:RegisterEvent("ADDON_LOADED")
 
 -- Event handler
 EOG.frame:SetScript("OnEvent", function(self, event, addon)
-    if event == "ADDON_LOADED" and addon == ADDON_NAME then
-        EOG:InitializeSavedVariables()
+    if event == "ADDON_LOADED" then
+        if addon ~= ADDON_NAME then return end
 
+        self:UnregisterEvent("ADDON_LOADED")
+        EOG:InitializeSavedVariables()
         EOG:UpdateGroupParity()
-    else
-        EOG:UpdateGroupParity()
+        print("Even Odd Group addon loaded. Use /eog for commands.")
+
+        return
     end
+
+    EOG:UpdateGroupParity()
 end)
 
 -- Slash command to toggle visibility and lock/unlock
@@ -156,5 +161,3 @@ SlashCmdList["EVENODDGROUP"] = function(msg)
         print("  /eog unlock - Unlock frame")
     end
 end
-
-print("Even Odd Group addon loaded. Use /eog for commands.")

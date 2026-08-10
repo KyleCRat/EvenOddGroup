@@ -1,8 +1,8 @@
-## Interface: 120001, 120005
+## Interface: 120007, 120100
 ## Title: Even Odd Group
 ## Notes: Displays whether you're in an even or odd group
 ## Author: Yvairel
-## Version: 12.0.5-1
+## Version: 12.1.0-2
 ## SavedVariablesPerCharacter: EvenOddGroupDB
 
 EvenOddGroup.lua
